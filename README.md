@@ -13,6 +13,18 @@ celiagg is a Cython wrapper for the popular Anti-Grain Geometry 2D vector
 graphics library.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/celiagg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/celiagg-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/celiagg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/celiagg-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/version.svg)](https://anaconda.org/conda-forge/celiagg)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/downloads.svg)](https://anaconda.org/conda-forge/celiagg)
+
 Installing celiagg
 ==================
 
@@ -68,18 +80,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/celiagg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/celiagg-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/celiagg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/celiagg-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/version.svg)](https://anaconda.org/conda-forge/celiagg)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/celiagg/badges/downloads.svg)](https://anaconda.org/conda-forge/celiagg)
 
 
 Updating celiagg-feedstock
