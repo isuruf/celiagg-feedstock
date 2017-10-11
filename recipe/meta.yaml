@@ -1,5 +1,5 @@
-{% set version = "0.1.2" %}
-{% set sha256 = "554265df9677e74d27415c0d8ed54c1f23d319ad8332db13f04281fb01c27182" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "5e65c68c3574ece9e1b10b1aa12b75beb713ddb2b3c4116f41b474ce589813b0" %}
 
 package:
   name: celiagg
@@ -12,20 +12,27 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py34]
+  skip: true  # [py34]
   script: python setup.py install
+  features:
+    - vc9   # [win and py27]
+    - vc14  # [win and py>=35]
 
 requirements:
   build:
     - python
     - toolchain
+    - vc 9  # [win and py27]
+    - vc 14  # [win and py>=35]
     - pkg-config  # [not win]
-    - numpy x.x
+    - numpy 1.11.*
     - cython
     - freetype 2.6.*
   run:
     - python
-    - numpy x.x
+    - vc 9  # [win and py27]
+    - vc 14  # [win and py>=35]
+    - numpy >=1.11
     - freetype 2.6.*
 
 test:
