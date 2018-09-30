@@ -1,5 +1,4 @@
-{% set version = "1.0.2" %}
-{% set sha256 = "5e65c68c3574ece9e1b10b1aa12b75beb713ddb2b3c4116f41b474ce589813b0" %}
+{% set version = "1.0.3" %}
 
 package:
   name: celiagg
@@ -8,32 +7,28 @@ package:
 source:
   fn: celiagg-{{ version }}.tar.gz
   url: https://github.com/celiagg/celiagg/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 8efded720a19afd87df2a140a589f9bc426cc9de1a6ab84111ff22d6e0d54e8d
 
 build:
   number: 0
-  skip: true  # [py34]
-  script: python setup.py install
-  features:
-    - vc9   # [win and py27]
-    - vc14  # [win and py>=35]
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
-    - python
-    - toolchain
-    - vc 9  # [win and py27]
-    - vc 14  # [win and py>=35]
     - pkg-config  # [not win]
-    - numpy 1.11.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - pip
+    - setuptools
+    - numpy 1.12
     - cython
-    - freetype 2.6.*
+    - freetype
   run:
     - python
-    - vc 9  # [win and py27]
-    - vc 14  # [win and py>=35]
-    - numpy >=1.11
-    - freetype 2.6.*
+    - {{ pin_compatible('numpy') }}
+    - freetype
 
 test:
   imports:
