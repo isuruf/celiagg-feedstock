@@ -11,8 +11,7 @@ source:
 
 build:
   number: 0
-  script:
-    - python setup.py install
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
@@ -21,7 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - pip
+    - pip   18.0
     - setuptools
     - numpy 1.11
     - cython
